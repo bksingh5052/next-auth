@@ -10,6 +10,7 @@ export async function GET(request:NextRequest,response:NextResponse) {
         console.log("me")
         await connect()
         const userId = await getDataFromToken(request)
+        console.log(userId)
         if(!userId){
             return NextResponse.json({message:"Token not found", status:400, success:false})
         }
