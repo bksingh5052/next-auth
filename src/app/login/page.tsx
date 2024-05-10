@@ -78,7 +78,7 @@ export default function Login()  {
         >
           Login
         </button>
-        <Link className="text-center text-blue-200" href='/signup'>Doesn't have an account? Signup</Link>
+        <Link className="text-center text-blue-200" href='/signup'>Does not have an account? Signup</Link>
       </form>
     </div>
   );
