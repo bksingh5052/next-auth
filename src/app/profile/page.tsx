@@ -14,7 +14,6 @@ export default function Profile()  {
   const getUserData = async ()=>{
     try {
       const res = await axios.get('/api/users/me')
-      console.log(res)
       if(res.data.error){
         throw new Error(res.data.error)
       }
