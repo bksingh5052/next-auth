@@ -14,10 +14,11 @@ export default function Profile()  {
   const getUserData = async ()=>{
     try {
       const res = await axios.get('/api/users/me')
-      console.log(res.data.user._id)
+      console.log(res)
       if(res.data.error){
         throw new Error(res.data.error)
       }
+      console.log(res.data.user._id)
       setData(res.data.user._id)
     } catch (error:any) {
       console.log(error.message)
