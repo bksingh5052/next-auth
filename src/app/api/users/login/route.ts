@@ -32,7 +32,7 @@ export async function POST(req:NextRequest, res:NextResponse) {
 
         response.cookies.set("token",token,{
             httpOnly: true,
-            expires: Date.now() + 86400000 
+            secure:true
         })
         return response;
 

@@ -4,11 +4,11 @@ import User from "@/models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 
 
-
+connect()
 export async function GET(request:NextRequest,response:NextResponse) {
     try {
         console.log("me")
-        await connect()
+
         const userId = await getDataFromToken(request)
         console.log(userId)
         if(!userId){
